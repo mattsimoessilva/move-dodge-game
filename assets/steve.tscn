@@ -1,8 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4xenhkdyble2"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_velam"]
+[ext_resource type="ArrayMesh" uid="uid://cr7mhs5sd3n2r" path="res://assets/playerball.tres" id="1_bg7nb"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_kng77"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_velam"]
 
 [node name="Steve" type="CharacterBody3D"]
 
@@ -10,4 +10,4 @@
 shape = SubResource("BoxShape3D_velam")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_kng77")
+mesh = ExtResource("1_bg7nb")

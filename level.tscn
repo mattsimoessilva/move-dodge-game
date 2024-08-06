@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqc8oqpv23gi1"]
+[gd_scene load_steps=11 format=3 uid="uid://cqc8oqpv23gi1"]
 
 [ext_resource type="PackedScene" uid="uid://c4xenhkdyble2" path="res://assets/steve.tscn" id="1_7utwx"]
 [ext_resource type="Script" path="res://scripts/steve.gd" id="2_jnbub"]
@@ -23,7 +23,11 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_m7fof"]
 size = Vector3(30, 2, 30)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0nqs"]
+albedo_color = Color(0.345098, 0.603922, 1, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_yf5ne"]
+material = SubResource("StandardMaterial3D_c0nqs")
 size = Vector3(30, 2, 30)
 
 [node name="Level" type="Node3D"]
@@ -59,5 +63,5 @@ shape = SubResource("BoxShape3D_m7fof")
 mesh = SubResource("BoxMesh_yf5ne")
 
 [node name="Steve" parent="." instance=ExtResource("1_7utwx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.277933, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81758, 0)
 script = ExtResource("2_jnbub")

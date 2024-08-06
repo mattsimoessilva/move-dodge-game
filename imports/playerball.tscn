@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bum4c3hngmmlq"]
+
+[ext_resource type="ArrayMesh" uid="uid://cr7mhs5sd3n2r" path="res://assets/playerball.tres" id="1_db8gp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgmyt"]
+
+[node name="playerball" type="CharacterBody3D"]
+
+[node name="Sphere" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_db8gp")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_mgmyt")
