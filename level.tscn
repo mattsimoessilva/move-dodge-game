@@ -13,7 +13,8 @@ sky_material = SubResource("ProceduralSkyMaterial_kibfi")
 [sub_resource type="Environment" id="Environment_oagj5"]
 background_mode = 2
 sky = SubResource("Sky_7d8bg")
-tonemap_mode = 2
+tonemap_mode = 1
+ssao_enabled = true
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p6cqt"]
@@ -33,7 +34,7 @@ size = Vector3(30, 2, 30)
 [node name="Level" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 7.55344, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 12.5534, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -50,9 +51,6 @@ shape = SubResource("BoxShape3D_p6cqt")
 transform = Transform3D(1, 0, 0, 0, 0.727449, -0.686161, 0, 0.686161, 0.727449, 0, 0, 0)
 mesh = SubResource("BoxMesh_es7rj")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.919314, 0.117306, -0.375634, 0, 0.954537, 0.298091, 0.393525, -0.27404, 0.87752, -3.40553, 1.80514, 4.44567)
-
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11788, 0)
 
@@ -65,3 +63,6 @@ mesh = SubResource("BoxMesh_yf5ne")
 [node name="Steve" parent="." instance=ExtResource("1_7utwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81758, 0)
 script = ExtResource("2_jnbub")
+
+[node name="Camera3D" type="Camera3D" parent="Steve"]
+transform = Transform3D(1, 0, 0, 0, 0.955875, 0.293773, 0, -0.293773, 0.955875, 0.0221875, 6.02297, 16.9979)
